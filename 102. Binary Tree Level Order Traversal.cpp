@@ -21,8 +21,8 @@ public:
             vector<int>levels;
             for(int i=0; i<n; i++){
                 TreeNode* node= tree.front();
-                tree.pop();
                 levels.push_back(node->val);
+                tree.pop();
                 if(node->left) tree.push(node->left);
                 if(node->right) tree.push(node->right);
             }
